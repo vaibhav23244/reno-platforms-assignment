@@ -1,8 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { SchoolType } from "@/types/schoolType";
 import { ArrowUpRight, SchoolIcon } from "lucide-react";
-import Image from "next/image";
 
 export default function ShowSchools({ schools }: { schools: SchoolType[] }) {
   if (schools.length === 0) {
@@ -35,7 +35,7 @@ export default function ShowSchools({ schools }: { schools: SchoolType[] }) {
               Schools Directory
             </h2>
             <span className="text-sm font-medium text-indigo-600">
-              Results {schools.length}
+              {schools.length} Results Found
             </span>
           </div>
           <Button asChild variant="secondary" className="group">
