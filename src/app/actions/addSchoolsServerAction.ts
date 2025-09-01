@@ -10,7 +10,7 @@ export async function addSchoolsServerAction(data: z.infer<typeof addSchoolFormS
   let filename = "";
 
   if (data.image instanceof File) {
-    filename = `${Date.now()}-${data.image.name}`;
+    filename = `${data.image.name}`;
     const buffer = Buffer.from(await data.image.arrayBuffer());
 
     const uploadPath = path.join(
