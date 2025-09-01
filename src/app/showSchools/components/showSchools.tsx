@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const schools = [
   {
@@ -56,13 +58,15 @@ export default function ShowSchools() {
               Showing {schools.length} schools
             </span>
           </div>
-          <Link
-            href="addSchool"
-            className="hidden text-sm font-medium text-indigo-600 hover:text-indigo-500 md:block"
-          >
-            Add School
-            <span aria-hidden="true"> &rarr;</span>
-          </Link>
+          <Button asChild variant="secondary" className="group">
+            <Link
+              href="addSchool"
+              className="hidden text-sm font-medium hover:text-indigo-500 md:flex"
+            >
+              Add School
+              <ArrowUpRight className="group-hover:rotate-45 ease-in-out transition-all duration-300" />
+            </Link>
+          </Button>
         </div>
       </div>
 
