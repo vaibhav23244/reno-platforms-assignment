@@ -26,15 +26,6 @@ const ShowSchoolsList = ({ schools }: { schools: SchoolType[] }) => {
         </div>
       ))}
 
-      <div className="mt-8 text-sm md:hidden">
-        <Link
-          href="addSchool"
-          className="font-medium text-indigo-600 hover:text-indigo-500"
-        >
-          Add School
-          <span aria-hidden="true"> &rarr;</span>
-        </Link>
-      </div>
     </div>
   );
 };

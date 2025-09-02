@@ -38,11 +38,8 @@ export default function ShowSchools({ schools }: { schools: SchoolType[] }) {
               {schools.length} Results Found
             </span>
           </div>
-          <Button asChild variant="secondary" className="group">
-            <Link
-              href="addSchool"
-              className="hidden text-sm font-medium md:flex"
-            >
+          <Button asChild variant="secondary" className="group sm:mt-0 mt-4">
+            <Link href="addSchool" className="text-sm font-medium">
               Add School
               <ArrowUpRight className="group-hover:rotate-45 ease-in-out transition-all duration-300" />
             </Link>

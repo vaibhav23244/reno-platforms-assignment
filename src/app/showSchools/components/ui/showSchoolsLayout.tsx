@@ -37,7 +37,7 @@ const ShowSchoolsLayout = ({
 
   return (
     <div className="mt-10">
-      <h2 className="mb-10 text-xl text-center sm:text-3xl">
+      <h2 className="mb-10 text-shadow-lg text-center sm:text-3xl">
         Your Gateway to Quality Education
       </h2>
 
