@@ -9,9 +9,9 @@ const FormLayout = () => {
       <div className="mx-auto w-full max-w-sm lg:w-96">
         <Button
           asChild
-          variant="ghost"
           size="sm"
-          className="mb-4 flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+          variant="secondary"
+          className="mb-4 w-1/2 flex items-center gap-2"
         >
           <Link href="/">
             <ArrowLeft className="h-4 w-4" />

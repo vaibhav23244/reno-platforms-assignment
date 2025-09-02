@@ -1,7 +1,7 @@
 import prisma from "@/lib/db";
-import SchowSchoolsLayout from "./showSchools/components/ui/schowSchoolsLayout";
+import ShowSchoolsLayout from "./showSchools/components/ui/showSchoolsLayout";
 
 export default async function Home() {
-  const schools = await prisma.school.findMany();  
-  return <SchowSchoolsLayout schools={schools} />;
+  const schools = await prisma.school.findMany();
+  return <ShowSchoolsLayout schools={schools} />;
 }
