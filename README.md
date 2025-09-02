@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# School Listing Application
+
+This is a Next.js application for listing schools. It uses Prisma for database management and allows users to add and search for schools.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) - React framework for building user interfaces.
+- [Prisma](https://www.prisma.io/) - Next-generation ORM for Node.js and TypeScript.
+- [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript.
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
+- [shadcn/ui](https://ui.shadcn.com/) - Re-usable components built using Radix UI and Tailwind CSS.
+- [Zod](https://zod.dev/) - TypeScript-first schema validation with static type inference.
+- [React Hook Form](https://react-hook-form.com/) - Performant, flexible and extensible forms with easy-to-use validation.
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running, follow these simple steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+### Prerequisites
+
+- Node.js (v20 or higher)
+- pnpm
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/your_username_/your_project_name.git
+   ```
+2. Install NPM packages
+   ```sh
+   pnpm install
+   ```
+3. Setup .env file
+   ```
+   DATABASE_URL="mysql://USER:PASSWORD@HOST:PORT/DATABASE"
+   ```
+4. Push the database schema
+   ```
+   npx prisma db push
+   ```
+5. Seed the database
+    ```
+    npx prisma db seed
+    ```
+
+### Running the application
+
+```sh
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `pnpm dev`: Runs the application in development mode.
+- `pnpm build`: Builds the application for production.
+- `pnpm start`: Starts the production server.
+- `pnpm lint`: Lints the code.
 
-## Learn More
+## Folder Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+.
+├── prisma
+│   ├── schema.prisma
+│   └── seed.ts
+├── public
+│   └── schoolImages
+└── src
+    ├── app
+    │   ├── addSchool
+    │   └── showSchools
+    ├── components
+    ├── lib
+    ├── schema
+    └── types
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Dependencies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<details>
+  <summary>Click to expand</summary>
 
-## Deploy on Vercel
+  - @hookform/resolvers: ^5.2.1
+  - @prisma/client: ^6.15.0
+  - @radix-ui/react-label: ^2.1.7
+  - @radix-ui/react-slot: ^1.2.3
+  - class-variance-authority: ^0.7.1
+  - clsx: ^2.1.1
+  - lucide-react: ^0.542.0
+  - motion: ^12.23.12
+  - next: 15.5.2
+  - next-themes: ^0.4.6
+  - prisma: ^6.15.0
+  - react: 19.1.0
+  - react-dom: 19.1.0
+  - react-hook-form: ^7.62.0
+  - sonner: ^2.0.7
+  - tailwind-merge: ^3.3.1
+  - zod: ^4.1.5
+</details>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Dev Dependencies
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<details>
+  <summary>Click to expand</summary>
+
+  - @eslint/eslintrc: ^3
+  - @tailwindcss/postcss: ^4
+  - @types/node: ^20
+  - @types/react: ^19
+  - @types/react-dom: ^19
+  - eslint: ^9
+  - eslint-config-next: 15.5.2
+  - tailwindcss: ^4
+  - tsx: ^4.20.5
+  - tw-animate-css: ^1.3.7
+  - typescript: ^5
+</details>
